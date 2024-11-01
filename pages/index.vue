@@ -5,11 +5,8 @@
     <!-- Header Section with Enhanced Nav -->
     <header id="header-section" class=" w-full text-text-color-light font-body overflow-hidden sticky top-0 z-30">
       <nav class="top-0 z-50 backdrop-blur-md bg-secondary shadow-xl " aria-label="Main Navigation">
-        <div class="absolute inset-0">
-    <!-- Enlarged Pattern Overlay -->
-    <div class="absolute -top-5 inset-0 bg-[url('/images/pattern-light.svg')] opacity-20 bg-[size:600px_600px]"></div>
-  </div>
-        <div class="max-w-7xl mx-auto px-4 py-3">
+        
+        <div class="max-w-5xl mx-auto px-4 py-3">
           <!-- Mobile Layout -->
           <div class="md:hidden">
             <div class="flex justify-center mb-4">
@@ -36,28 +33,89 @@
       </div>
       
       <!-- Desktop Layout -->
-      <div class="hidden md:flex items-center justify-center relative text-primary uppercase [text-shadow:_1px_1px_1px_rgb(0_0_0_/_70%)]">
-        <ul class="absolute left-4 flex space-x-8">
+      <div class="hidden md:flex items-center justify-center relative text-text-color-light uppercase [text-shadow:_1px_1px_1px_rgb(0_0_0_/_70%)]">
+        <ul class="absolute left-4 flex">
           <li>
-            <a href="#home" class="nav-link">Home</a>
+            <a href="#home"
+               class="
+                  relative 
+                    
+                 pt-[21px] 
+                 
+                 h-28
+                 w-32
+                 flex items-center 
+                 text-primary text-lg font-medium hover:text-primary
+                 bg-[url('/images/pattern-dark.svg')] 
+                 bg-no-repeat 
+                 bg-center 
+                 bg-cup
+               ">
+              <span class="text-text-color-light w-full text-center">Home</span>
+            </a>
           </li>
           <li>
-            <a href="#menus" class="nav-link">Menus</a>
+            <a href="#menus"
+               class="
+                 relative 
+                  px-4 py-2 
+                 pt-[21px] 
+                 h-28
+                 w-32
+                 flex items-center 
+                 text-primary text-lg font-medium hover:text-primary
+                 bg-[url('/images/pattern-dark.svg')] 
+                 bg-no-repeat 
+                 bg-center 
+                 bg-cup
+               ">
+              <span class="text-text-color-light w-full text-center">Menus</span>
+            </a>
           </li>
         </ul>
         
         <NuxtImg
         src="images/logo.png"
         alt="Rivertown Coffee Co. Logo"
-        class="h-20 transform hover:scale-105 transition-all duration-300"
+        class="h-28 transform hover:scale-105 transition-all duration-300"
         />
         
-        <ul class="absolute right-4 flex space-x-8">
+        <ul class="absolute right-4 flex">
           <li>
-            <a href="#about" class="nav-link">About</a>
+            <a href="#about"
+               class="
+               relative 
+                  px-4 py-2 
+                 pt-[21px] 
+                 h-28
+                 w-32
+                 flex items-center 
+                 text-primary text-lg font-medium hover:text-primary
+                 bg-[url('/images/pattern-dark.svg')] 
+                 bg-no-repeat 
+                 bg-center 
+                 bg-cup
+               ">
+              <span class="text-text-color-light w-full text-center">About</span>
+            </a>
           </li>
           <li>
-            <a href="#contact" class="nav-link">Contact</a>
+            <a href="#contact"
+               class="
+           relative 
+                  px-4 py-2 
+                 pt-[21px] 
+                 h-28
+                 w-32
+                 flex items-center 
+                 text-primary text-lg font-medium hover:text-primary
+                 bg-[url('/images/pattern-dark.svg')] 
+                 bg-no-repeat 
+                 bg-center 
+                 bg-cup
+               ">
+              <span class="text-text-color-light w-full text-center">Contact</span>
+            </a>
           </li>
         </ul>
       </div>
@@ -269,7 +327,7 @@
 <section id="call-to-action" class="relative py-16 overflow-hidden bg-gradient-to-b from-bg-row3 to-bg-row2">
  
   
-  <div class="relative max-w-3xl mx-auto px-4 text-center text-dark">
+  <div class="relative max-w-3xl mx-auto px-4 text-center text-text-color-light">
     <h2 class="text-3xl sm:text-4xl font-header mb-6 animate-float">
       Share Your Experience
     </h2>
@@ -294,7 +352,7 @@
 </div>
 
 <!-- Footer Section -->
-<footer id="footer" class="py-12 bg-black sticky bottom-0 z-20 overflow-hidden">
+<footer id="footer" class="py-12 bg-black z-50 relative overflow-hidden">
   <div class="relative max-w-6xl mx-auto px-4">
     <div class="flex flex-col md:flex-row justify-between items-center gap-8">
       <!-- Quick Links -->
@@ -302,55 +360,58 @@
         <ul class="flex flex-wrap justify-center md:justify-start gap-6">
           <li v-for="(link, index) in ['Home', 'Menus', 'About', 'Contact']" :key="index">
             <a :href="`#${link.toLowerCase()}`"
-            class="text-text-color-light hover:text-primary/80 transition-colors duration-300
+               class="text-text-color-light hover:text-primary/80 transition-colors duration-300
                       relative after:absolute after:bottom-0 after:left-0
                       after:w-full after:h-px after:bg-primary after:origin-right
                       after:scale-x-0 hover:after:scale-x-100 after:transition-transform">
-            {{ link }}
-          </a>
-        </li>
-      </ul>
-    </nav>
+              {{ link }}
+            </a>
+          </li>
+        </ul>
+      </nav>
+      
+      <!-- Contact Info -->
+      <div class="text-center md:text-right space-y-3">
+        <h3 class="text-text-color-light">Rivertown Coffee Co.</h3>
+        <a href="https://goo.gl/maps/YOUR-MAPS-LINK"
+           target="_blank"
+           rel="noopener"
+           class="flex items-center justify-center md:justify-end group">
+          <Icon name="mdi-map-marker" class="text-text-color-light mr-2 group-hover:scale-110 transition-transform" />
+          <span class="text-text-color-light group-hover:text-primary/80 transition-colors">
+            117 N Seminary St, Florence, AL 35630
+          </span>
+        </a>
+        <a href="tel:2567657128"
+           class="flex items-center justify-center md:justify-end group">
+          <Icon name="mdi-phone" class="text-text-color-light mr-2 group-hover:scale-110 transition-transform" />
+          <span class="text-text-color-light group-hover:text-primary/80 transition-colors">
+            (256) 765-7128
+          </span>
+        </a>
+      </div>
+      
+      <!-- Social Media -->
+      <div class="flex justify-center space-x-4">
+        <a href="https://www.facebook.com/RivertownCoffeeCo"
+           target="_blank"
+           rel="noopener"
+           class="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors group"
+           aria-label="Facebook">
+          <Icon name="mdi-facebook" size="24" 
+                class="text-text-color-light group-hover:text-primary/80 transition-colors" />
+        </a>
+      </div>
+    </div>
     
-    <!-- Contact Info -->
-    <div class="text-center md:text-right space-y-3">
-      <h3 class="text-text-color-light">Rivertown Coffee Co.</h3>
-      <a href="https://goo.gl/maps/YOUR-MAPS-LINK"
-      target="_blank"
-      rel="noopener"
-      class="flex items-center justify-center md:justify-end group">
-      <Icon name="mdi-map-marker" class="text-text-color-light mr-2 group-hover:scale-110 transition-transform" />
-      <span class="text-text-color-light group-hover:text-primary/80 transition-colors">
-        117 N Seminary St, Florence, AL 35630
-      </span>
-    </a>
-    <a href="tel:2567657128"
-    class="flex items-center justify-center md:justify-end group">
-    <Icon name="mdi-phone" class="text-text-color-light mr-2 group-hover:scale-110 transition-transform" />
-    <span class="text-text-color-light group-hover:text-primary/80 transition-colors">
-      (256) 765-7128
-    </span>
-  </a>
-</div>
-
-<!-- Social Media -->
-<div class="flex justify-center space-x-4">
-  <a href="https://www.facebook.com/RivertownCoffeeCo"
-  target="_blank"
-  rel="noopener"
-  class="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors group"
-  aria-label="Facebook">
-  <Icon name="mdi-facebook" size="24" 
-  class="text-text-color-light group-hover:text-primary/80 transition-colors" />
-</a>
-</div>
-</div>
-
-<!-- Copyright -->
-<div class="mt-12 pt-8 border-t border-primary/20 text-center text-sm text-text-color-light">
-  © 2024 Rivertown Coffee Co. All rights reserved. Website by <a href="https://withjeremy.com/" target="_blank" rel="noopener" class="text-accent hover:text-primary/80 transition-colors duration-300">With Jeremy</a>
-</div>
-</div>
+    <!-- Copyright -->
+    <div class="mt-12 pt-8 border-t border-primary/20 text-center text-sm text-text-color-light">
+      © 2024 Rivertown Coffee Co. All rights reserved. Website by 
+      <a href="https://withjeremy.com/" target="_blank" rel="noopener" class="text-accent hover:text-primary/80 transition-colors duration-300">
+        With Jeremy
+      </a>
+    </div>
+  </div>
 </footer>
 </template>
 
@@ -409,40 +470,5 @@ const serviceHours = [
 
 .animate-float {
   animation: float 6s ease-in-out infinite;
-}
-
-/* Neumorphic Styles */
-.nav-link {
-  @apply relative px-4 py-2 text-lg font-medium hover:text-primary
-  before:content-[''] before:absolute before:bottom-0 before:left-0 
-  before:w-full before:h-0.5 before:bg-primary
-  before:transform before:scale-x-0 before:transition-transform
-  before:duration-300 hover:before:scale-x-100;
-}
-
-@media (max-width: 768px) {
-  .nav-link {
-    @apply text-base px-3;
-  }
-}
-
-/* Parallax Effect */
-.bg-fixed {
-  background-attachment: fixed;
-}
-
-/* New Styles for bg-primary-light and Dark Text */
-
-
-
-
-/* Adjusting the CTA Button Glow to Prevent Spread */
-#call-to-action .relative {
-  position: relative;
-}
-
-#call-to-action .absolute.blur-xl {
-  /* Ensure the blur effect doesn't affect the text */
-  pointer-events: none;
 }
 </style>

@@ -1,6 +1,12 @@
 module.exports = {
   theme: {
     extend: {
+      backgroundSize: {
+        'cup': '420px',
+      },
+      backgroundPosition: {
+        'cup-left': 'left center',
+      },
       colors: {
         primary: "#6B4F4F",
         secondary: "#C3A995",
@@ -34,6 +40,9 @@ module.exports = {
   variants: {
     extend: {
       textColor: ['dark'],
+      backgroundImage: ['responsive'],
+      backgroundSize: ['responsive'],
+      backgroundPosition: ['responsive'],
     },
   },
   plugins: [],
