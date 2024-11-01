@@ -34,6 +34,6 @@ export default {
 
   // Target: Static
   target: "static",
-
+  devtools: { enabled: false },
   compatibilityDate: "2024-10-31",
 };
